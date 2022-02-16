@@ -1,7 +1,9 @@
-function Todo() {
+//props
+function Todo(props) {
   return(
   <div className="card">
-    <h2>Title</h2>
+      {/* dynamic content */}
+    <h2>{props.text}</h2>
     <div className="actions">
       <button className="btn">Delete</button>
     </div>
