@@ -1,3 +1,5 @@
+import TravelPlaceList from "../components/travelPlace/TravelPlaceList";
+
 const DUMMY_DATA = [
     {
       id: 'm1',
@@ -24,9 +26,7 @@ function AllPlacesPage(){
         <section>
             <h1>All Meetups</h1>
             <ul>
-                {DUMMY_DATA.map((meetup) => {
-                    return <li key={meetup.id}>{meetup.title}</li>
-                })}
+                <TravelPlaceList places={DUMMY_DATA}/>
             </ul>
         </section>
     );
