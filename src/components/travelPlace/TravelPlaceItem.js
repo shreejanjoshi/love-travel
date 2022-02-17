@@ -1,19 +1,22 @@
 import classes from './TravelPlaceItem.module.css'
+import Card from '../ui/Card';
 
 function TravelPlaceItem(props){
     return(
         <li className={classes.item}>
-            <div className={classes.image}>
-                <img src={props.image} alt={props.title} />
-            </div>
-            <div className={classes.content}>
-                <h3>{props.title}</h3>
-                <address>{props.address}</address>
-                <p>{props.description}</p>
-            </div>
-            <div className={classes.actions}>
-                <button>Visited</button>
-            </div>
+            <Card>
+                <div className={classes.image}>
+                    <img src={props.image} alt={props.title} />
+                </div>
+                <div className={classes.content}>
+                    <h3>{props.title}</h3>
+                    <address>{props.address}</address>
+                    <p>{props.description}</p>
+                </div>
+                <div className={classes.actions}>
+                    <button>Visited</button>
+                </div>
+            </Card>
         </li>
     );
 }

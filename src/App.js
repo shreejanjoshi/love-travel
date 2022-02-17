@@ -1,15 +1,14 @@
 import { Route, Switch } from 'react-router-dom';
+import Layout from './components/layout/Layout';
 
 import AllPlaces from './pages/AllPlaces';
 import NewPlace from './pages/NewPlace';
 import Visited from './pages/Visited';
-import MainNav from './components/layout/MainNav';
 
 //stander js function but reurn jsx code
 function App() {
   return (
-    <div>
-      <MainNav />
+    <Layout>
       <Switch>
         <Route path='/' exact>
           <AllPlaces />
@@ -21,7 +20,7 @@ function App() {
           <Visited />
         </Route>
       </Switch>
-    </div>
+    </Layout>
   );
 }
 
