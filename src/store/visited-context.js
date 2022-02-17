@@ -3,11 +3,15 @@ import { createContext, useState } from "react";
 // V contain react component
 const VistiedContext = createContext({
     vistied: [],
-    totalVisited: 0
+    totalVisited: 0,
+
+    addVisited: (visitedTavelPlace) => {},
+    removeVisited: (travelPlaceId) => {},
+    itemIsVisited: (travelPlaceId) => {},
 });
 
 //provding this context to all the compoenent that arae interested in listing the value and updating context value
-function VistiedContextProvider(props){
+export function VistiedContextProvider(props){
 
     const [userVisted, setUserVisited] = useState([]);
 
@@ -35,6 +39,10 @@ function VistiedContextProvider(props){
     const context = {
         favorites: userVisted,
         totalVisited: userVisted.length,
+        //so dont excute the function but point at it
+        addVisited: addVisitedHandler,
+        removeVisited: removeVisitedHandler,
+        itemIsVisited: itemIsVisitedHandler,
     };
 
     //letest value
@@ -42,3 +50,5 @@ function VistiedContextProvider(props){
         {props.children}
     </VistiedContext.Provider>
 }
+
+export default VistiedContext;
