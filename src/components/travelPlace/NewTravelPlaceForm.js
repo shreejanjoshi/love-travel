@@ -3,7 +3,7 @@ import { useRef  } from 'react';
 import classes from './NewTravelPlaceForm.module.css';
 import Card from '../ui/Card';
 
-function NewTravelPlaceForm(){
+function NewTravelPlaceForm(props){
     const titleInputRef = useRef();
     const imageInputRef = useRef();
     const addressInputRef = useRef();
@@ -27,7 +27,7 @@ function NewTravelPlaceForm(){
             description: enteredDescription,
         };
 
-        console.log(travelPlaceData);
+        props.onAddTravelPlace(travelPlaceData);
     }
 
     return(
