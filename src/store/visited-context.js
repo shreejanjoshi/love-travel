@@ -7,13 +7,13 @@ const VistiedContext = createContext({
 
     addVisited: (visitedTavelPlace) => {},
     removeVisited: (travelPlaceId) => {},
-    itemIsVisited: (travelPlaceId) => {},
+    itemIsVisited: (travelPlaceId) => {}
 });
 
 //provding this context to all the compoenent that arae interested in listing the value and updating context value
 export function VistiedContextProvider(props){
 
-    const [userVisted, setUserVisited] = useState([]);
+    const [userVisited, setUserVisited] = useState([]);
 
     function addVisitedHandler(visitedTavelPlace){
         //concat is like push but return new array with that added meetup
@@ -27,18 +27,18 @@ export function VistiedContextProvider(props){
         setUserVisited(prevUserVisited =>{
             //get new array
             //drop that item
-            return prevUserVisited.filter(travelPlace => travelPlace.id != travelPlaceId);
+            return prevUserVisited.filter(travelPlace => travelPlace.id !== travelPlaceId);
         });
     }
 
     function itemIsVisitedHandler(travelPlaceId){
         //some build in funcution
-        return userVisted.some(travelPlace => travelPlace.id === travelPlaceId);
+        return userVisited.some(travelPlace => travelPlace.id === travelPlaceId);
     }
 
     const context = {
-        favorites: userVisted,
-        totalVisited: userVisted.length,
+        favorites: userVisited,
+        totalVisited: userVisited.length,
         //so dont excute the function but point at it
         addVisited: addVisitedHandler,
         removeVisited: removeVisitedHandler,
@@ -46,9 +46,11 @@ export function VistiedContextProvider(props){
     };
 
     //letest value
-    return <VistiedContext.Provider value={context}>
+    return(
+    <VistiedContext.Provider value={context}>
         {props.children}
     </VistiedContext.Provider>
+    );
 }
 
 export default VistiedContext;

@@ -5,14 +5,14 @@ function TravelPlaceList(props){
     return(
         <ul className={classes.list}>
             {/* place u can choose */}
-            {props.places.map(place => 
+            {props.places.map(travelPlace => 
                 <TravelPlaceItem 
-                    key={place.id} 
-                    id={place.id} 
-                    image={place.image} 
-                    title={place.title}
-                    address={place.address}
-                    description={place.description}
+                    key={travelPlace.id} 
+                    id={travelPlace.id} 
+                    image={travelPlace.image} 
+                    title={travelPlace.title}
+                    address={travelPlace.address}
+                    description={travelPlace.description}
                 />
             )}
         </ul>
