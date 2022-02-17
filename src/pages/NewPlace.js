@@ -1,6 +1,11 @@
+import NewTravelPlaceForm from "../components/travelPlace/NewTravelPlaceForm";
+
 function NewPlacePage(){
     return(
-        <div>New Place</div>
+        <section>
+            <h1>Add New Places</h1>
+            <NewTravelPlaceForm />
+        </section>
     );
 }
 
