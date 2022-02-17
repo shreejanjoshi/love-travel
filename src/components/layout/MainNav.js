@@ -8,7 +8,7 @@ function MainNav(){
                 <ul>
                     <li><Link to='/'>All Places</Link></li>
                     <li><Link to='/newPlace'>All Places</Link></li>
-                    <li><Link to='/favorites'>Visited</Link></li>
+                    <li><Link to='/visited'>Visited</Link></li>
                 </ul>
             </nav>
         </header>
