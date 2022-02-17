@@ -1,32 +1,38 @@
+import {useState} from'react';
+
 import TravelPlaceList from "../components/travelPlace/TravelPlaceList";
 
-const DUMMY_DATA = [
-    {
-      id: 'm1',
-      title: 'This is a first place',
-      image:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/2560px-Stadtbild_M%C3%BCnchen.jpg',
-      address: 'Meetupstreet 5, 12345 place City',
-      description:
-        'This is a first, amazing place which you definitely should not miss. It will be a lot of fun!',
-    },
-    {
-      id: 'm2',
-      title: 'This is a second place',
-      image:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/2560px-Stadtbild_M%C3%BCnchen.jpg',
-      address: 'Meetupstreet 5, 12345 place City',
-      description:
-        'This is a first, amazing place which you definitely should not miss. It will be a lot of fun!',
-    },
-  ];
-
 function AllPlacesPage(){
+    //1 currecent state snapshote and 2 is a function to updatinge state 
+    const [isloading, setIsLoading] = useState(true);
+    const [loadedTravelPlace, setLoadedTravelPlace] = useState([]);
+
+    //store data from databse
+    //wanna send request to get data
+    fetch(
+        'https://lovel-travel-default-rtdb.europe-west1.firebasedatabase.app/travelplace.json'
+        ).then(response => {
+            //json it return promis as well so
+            return response.json();
+        }).then((data) =>{
+            //then get acture data
+            setIsLoading(false);
+            setLoadedTravelPlace(data);
+        });
+
+        if(isloading){
+          return(
+            <section>
+              <p>Loading...</p>
+            </section>
+          );
+        }
+
     return(
         <section>
             <h1>All Meetups</h1>
             <ul>
-                <TravelPlaceList places={DUMMY_DATA}/>
+                <TravelPlaceList places={loadedTravelPlace}/>
             </ul>
         </section>
     );
