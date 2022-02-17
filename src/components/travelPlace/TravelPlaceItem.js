@@ -3,13 +3,13 @@ import Card from '../ui/Card';
 
 //context hook allows us to establish a connection between this componeneta and the context
 import { useContext } from 'react';
-import VistiedContext from '../../store/visited-context';
+import VisitedContext from '../../store/visited-context';
 
 function TravelPlaceItem(props){
 
     //data from context
     //visited-context  const context store in this visitedCtx
-    const visitedCtx = useContext(VistiedContext);
+    const visitedCtx = useContext(VisitedContext);
 
     //return true or false
     const itemIsVisited = visitedCtx.itemIsVisited(props.id);

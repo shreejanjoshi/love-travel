@@ -1,25 +1,25 @@
 import { createContext, useState } from "react";
 
 // V contain react component
-const VistiedContext = createContext({
-    vistied: [],
+const VisitedContext = createContext({
+    visited: [],
     totalVisited: 0,
 
-    addVisited: (visitedTavelPlace) => {},
+    addVisited: (visitedTravelPlace) => {},
     removeVisited: (travelPlaceId) => {},
     itemIsVisited: (travelPlaceId) => {}
 });
 
 //provding this context to all the compoenent that arae interested in listing the value and updating context value
-export function VistiedContextProvider(props){
+export function VisitedContextProvider(props){
 
     const [userVisited, setUserVisited] = useState([]);
 
-    function addVisitedHandler(visitedTavelPlace){
+    function addVisitedHandler(visitedTravelPlace){
         //concat is like push but return new array with that added meetup
         //get latest snapshot
         setUserVisited((prevUserVisited) => {
-            return prevUserVisited.concat(visitedTavelPlace);
+            return prevUserVisited.concat(visitedTravelPlace);
         })
     }
 
@@ -47,10 +47,10 @@ export function VistiedContextProvider(props){
 
     //letest value
     return(
-    <VistiedContext.Provider value={context}>
+    <VisitedContext.Provider value={context}>
         {props.children}
-    </VistiedContext.Provider>
+    </VisitedContext.Provider>
     );
 }
 
-export default VistiedContext;
+export default VisitedContext;

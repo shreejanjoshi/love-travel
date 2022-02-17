@@ -20,7 +20,7 @@ function NewPlacePage(){
                 headers: {
                     //extra meta data to make it more clear this is request carry json data
                     'Content-Type': 'application/json'
-                }
+                },
             }
         ).then(() =>{
             //nav it away but wont allow us to use back button

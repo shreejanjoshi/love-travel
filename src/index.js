@@ -6,14 +6,14 @@ import './index.css';
 import App from './App';
 
 //dont want defalu but component function
-import { VistiedContextProvider } from './store/visited-context'
+import { VisitedContextProvider } from './store/visited-context'
 
 ReactDOM.render(
   // want to render app in this root ... render the content
-  <VistiedContextProvider>
+  <VisitedContextProvider>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </VistiedContextProvider>,
+  </VisitedContextProvider>,
   document.getElementById('root')
 );

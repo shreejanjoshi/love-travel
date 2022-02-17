@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 import classes from './MainNav.module.css';
 
 import {useContext} from 'react';
-import VistiedContext from '../../store/visited-context';
+import VisitedContext from '../../store/visited-context';
 
 function MainNav(){
-    const visitedCtx = useContext(VistiedContext);
+    const visitedCtx = useContext(VisitedContext);
     return(
         <header className={classes.header}>
             <div className={classes.logo}>Love Travel</div>

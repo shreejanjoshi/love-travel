@@ -13,7 +13,7 @@ function VisitedPage(){
     if(visitedCtx.totalVisited === 0){
         content = <p>You havn't visited any place yet.</p>;
     }else{
-        content = <TravelPlaceList travelPlace={visitedCtx.vistied} />;
+        content = <TravelPlaceList travelPlaces={visitedCtx.visited} />;
     }
 
     return(
