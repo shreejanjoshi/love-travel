@@ -1,9 +1,15 @@
+import { useHistory } from 'react-router-dom';
+
 import NewTravelPlaceForm from "../components/travelPlace/NewTravelPlaceForm";
 
 function NewPlacePage(){
+    //gives history obj which expose certin  methods that allow to manipulate the bower history to nav it away
+    const history = useHistory();
+
     function addTravelPlaceHandler(travelPlaceData){
         //sending http request we can use fetch function
         //fetch is get request we need post request
+        //return promis
         fetch(
             'https://lovel-travel-default-rtdb.europe-west1.firebasedatabase.app/travelplace.json', 
             {
@@ -16,7 +22,10 @@ function NewPlacePage(){
                     'Content-Type': 'application/json'
                 }
             }
-        );
+        ).then(() =>{
+            //nav it away but wont allow us to use back button
+            history.replace('/');
+        });
     }
 
     return(
