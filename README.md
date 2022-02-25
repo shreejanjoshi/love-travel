@@ -38,7 +38,7 @@ I made this project by using JS library React. In this project I can add places 
 #### Home page
 
 Home page where we can see all the places we want to travel.
-
+![](img/1.png)
 
 if clicked on visted it will add that place visted page
 
