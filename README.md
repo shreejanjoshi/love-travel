@@ -1,68 +1,37 @@
 # love-travel
-Add Places you want to visit - with React
 
-```
-```
+## Getting Started with Create React App
 
-Before I started to make this Love travel project. I also made this mini project to understant the work flow React.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-1st in the App.js I wrote few html code. 
+## Available Scripts
 
- ``` 
-    function App() {
-        return (
-            <div>
-            <h1>My Todos</h1>
-            <div>
-                <h2>Title</h2>
-                <div>
-                <button>Delete</button>
-                </div>
-            </div>
-            </div>
-        );
-    }
+In the project directory, you can run:
 
-    export default App;
-```
+### `npm start`
 
-After that instead of writing todo html code there, I made new folder with name components and made new js file with todo. 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-app.js
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-```
-import Todo from "./components/Todo";
+### `npm test`
 
-//stander js function but reurn jsx code
-function App() {
-  return (
-    <div>
-      <h1>My Todos</h1>
-      <Todo />
-      <Todo />
-      <Todo />
-      <Todo />
-    </div>
-  );
-}
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-export default App;
+### `npm run build`
 
-```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-todo.js
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-```
-function Todo() {
-  return(
-  <div className="card">
-    <h2>Title</h2>
-    <div className="actions">
-      <button className="btn">Delete</button>
-    </div>
-  </div>
-  );
-}
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-export default Todo;
-```
+## Projects
+
+I made this project by using JS library React. In this project I can add places where I love to travel and if I already visited that place then I can add the place to visited section. (worked with components, props, useState, event props, routing, wrapper components with props.children, form, used firbaserealtimedatabase, fetching data, useEffecthook)
+
