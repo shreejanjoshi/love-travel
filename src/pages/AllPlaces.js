@@ -47,7 +47,7 @@ function AllPlacesPage(){
 
     return(
         <section>
-            <h1>All Meetups</h1>
+            <h1>All travelplaces</h1>
             <ul>
                 <TravelPlaceList travelPlaces={loadedTravelPlaces}/>
             </ul>

@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import VisitedContext from '../store/visited-context';
+import VisitedContext from '../components/store/visited-context';
 import TravelPlaceList from '../components/travelPlace/TravelPlaceList';
 
 function VisitedPage(){

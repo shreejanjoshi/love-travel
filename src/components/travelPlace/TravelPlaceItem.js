@@ -3,7 +3,7 @@ import Card from '../ui/Card';
 
 //context hook allows us to establish a connection between this componeneta and the context
 import { useContext } from 'react';
-import VisitedContext from '../../store/visited-context';
+import VisitedContext from '../store/visited-context';
 
 function TravelPlaceItem(props){
 

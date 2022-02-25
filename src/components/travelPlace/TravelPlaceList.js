@@ -5,7 +5,7 @@ function TravelPlaceList(props){
     return(
         <ul className={classes.list}>
             {/* place u can choose */}
-            {props.travelPlaces.map((travelPlace) => (
+            {props.travelPlaces?.map((travelPlace) => (
                 <TravelPlaceItem 
                     key={travelPlace.id} 
                     id={travelPlace.id} 

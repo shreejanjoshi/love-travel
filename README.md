@@ -35,3 +35,14 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 I made this project by using JS library React. In this project I can add places where I love to travel and if I already visited that place then I can add the place to visited section. (worked with components, props, useState, event props, routing, wrapper components with props.children, form, used firbaserealtimedatabase, fetching data, useEffecthook)
 
+#### Home page
+
+Home page where we can see all the places we want to travel.
+
+
+if clicked on visted it will add that place visted page
+
+
+#### New Place 
+
+There is form where we can add new places and it will add in database of firebase

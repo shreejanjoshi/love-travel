@@ -3,6 +3,7 @@ import { useRef  } from 'react';
 import classes from './NewTravelPlaceForm.module.css';
 import Card from '../ui/Card';
 
+
 function NewTravelPlaceForm(props){
     const titleInputRef = useRef();
     const imageInputRef = useRef();

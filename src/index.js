@@ -6,7 +6,7 @@ import './index.css';
 import App from './App';
 
 //dont want defalu but component function
-import { VisitedContextProvider } from './store/visited-context'
+import { VisitedContextProvider } from './components/store/visited-context'
 
 ReactDOM.render(
   // want to render app in this root ... render the content

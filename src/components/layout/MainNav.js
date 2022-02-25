@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import classes from './MainNav.module.css';
 
 import {useContext} from 'react';
-import VisitedContext from '../../store/visited-context';
+import VisitedContext from '../store/visited-context';
 
 function MainNav(){
     const visitedCtx = useContext(VisitedContext);
