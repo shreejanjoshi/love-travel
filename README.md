@@ -41,8 +41,9 @@ Home page where we can see all the places we want to travel.
 ![](img/1.png)
 
 if clicked on visted it will add that place visted page
-
+![](img/2.png)
 
 #### New Place 
 
 There is form where we can add new places and it will add in database of firebase
+![](img/3.png)
